@@ -21,10 +21,11 @@ fun main(args: Array<String>) {
 
 fun minimumOf(number1: Long, number2: Long){
     if(number1<number2) {
-        print("Number 1 is less than Number2")
-    }else{
-        print("Number 2 is greater than Number 1 ")
+        println("Number 1 is less than Number2 ")
+    }else if (number1>=number2){
+        println("Number 2 is greater than Number 1 ")
     }
+
     //TODO This function takes in two numbers and:
     //  if number1 is less than number2, then print a message informing the user of that.
     //  if number1 is greater than or equal to number2, print a message letting the user know that.
@@ -47,9 +48,18 @@ fun rangeOf(number: Int){
 }
 
 fun inferredTypeOf(variable: Any){
+    when(variable){
+        is Int -> println("The inferred type is Int")
+        is Long -> println("The inferred type is Long")
+        is Double -> println("The inferred type is Double")
+        is Float -> println("The inferred type is Float")
+        is Boolean -> println("The inferred type is Boolean")
+    }
+
+
     //TODO This function examines the inferred type of the variable passed as a parameter.
     // When the type is Int, print out that the data type of the variable is Int.
-    //    Adopt the same approach for the following types: Long, Double, Float or Boolean.
+    // Adopt the same approach for the following types: Long, Double, Float or Boolean.
     // When the data type is not Int, Long, Double, Float or Boolean, print that the data type is something else.
 }
 
