@@ -12,19 +12,35 @@
 // Hint: the week 2 syntax labs are a good support for completing this project
 
 fun main(args: Array<String>) {
-    minimumOf(5,7)
-    rangeOf(4)
-    inferredTypeOf(0.0F)
-    stringContains("wordle")
+    println(minimumOf(5,7))
+    println(rangeOf(4))
+    println(inferredTypeOf(0.0F))
+    println(stringContains("wordle"))
+
 }
 
 fun minimumOf(number1: Long, number2: Long){
+    if(number1<number2) {
+        print("Number 1 is less than Number2")
+    }else{
+        print("Number 2 is greater than Number 1 ")
+    }
     //TODO This function takes in two numbers and:
     //  if number1 is less than number2, then print a message informing the user of that.
     //  if number1 is greater than or equal to number2, print a message letting the user know that.
 }
 
 fun rangeOf(number: Int){
+    when(number){
+        in Int.MIN_VALUE..0-> println("The number falls into the range is 0 or below")
+        in 1..5->println("The number falls into the range is 1 to 5")
+        in 6..10->println("The number falls into the range is 6 to 10")
+        in 11..20->println("The number falls into the range is 11 to 20")
+        in 21..Int.MAX_VALUE->println("The number falls into the range is 21 and over")
+        else->println("The number is: $number")
+    }
+
+
     //TODO This function takes in a number and prints out the range that the number falls in.
     // The ranges are: (0 or below) (1 to 5), (6 to 10), (11 to 20), (21+)
     // For example, if the number was 7, print out a message saying that the number 7 falls into the range 6 to 10.
