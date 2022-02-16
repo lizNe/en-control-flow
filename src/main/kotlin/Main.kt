@@ -72,7 +72,7 @@ fun stringContains(myString : String) = when {
         myString.contains("A") -> println("The string $myString contains the letter A")
         myString.contains("B") -> println("The string $myString contains the letter B")
         myString.contains("C") -> println("The string $myString contains the letter C")
-        myString.length == 0 -> println("Empty String..no word displayed")
+        myString.isEmpty() -> println("Empty String..no word displayed")
         else -> println("The string $myString contains none of the above letters ")
     }
 
