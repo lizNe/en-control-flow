@@ -12,10 +12,10 @@
 // Hint: the week 2 syntax labs are a good support for completing this project
 
 fun main(args: Array<String>) {
-    println(minimumOf(5,7))
-    println(rangeOf(4))
-    println(inferredTypeOf(0.0F))
-    println(stringContains("wordle"))
+    minimumOf(5,7)
+    rangeOf(4)
+    inferredTypeOf(0.0F)
+    stringContains("Cove")
 
 }
 
@@ -47,27 +47,41 @@ fun rangeOf(number: Int){
     // For example, if the number was 7, print out a message saying that the number 7 falls into the range 6 to 10.
 }
 
-fun inferredTypeOf(variable: Any){
-    when(variable){
+fun inferredTypeOf(variable: Any) {
+    when (variable) {
         is Int -> println("The inferred type is Int")
         is Long -> println("The inferred type is Long")
         is Double -> println("The inferred type is Double")
         is Float -> println("The inferred type is Float")
         is Boolean -> println("The inferred type is Boolean")
+        else -> {
+            println("The inferred type is none of the above")
+
+        }
     }
+}
 
 
     //TODO This function examines the inferred type of the variable passed as a parameter.
     // When the type is Int, print out that the data type of the variable is Int.
     // Adopt the same approach for the following types: Long, Double, Float or Boolean.
     // When the data type is not Int, Long, Double, Float or Boolean, print that the data type is something else.
-}
 
-fun stringContains(str : String){
+
+fun stringContains(myString : String) = when {
+        myString.contains("A") -> println("The string $myString contains the letter A")
+        myString.contains("B") -> println("The string $myString contains the letter B")
+        myString.contains("C") -> println("The string $myString contains the letter C")
+        myString.length == 0 -> println("Empty String..no word displayed")
+        else -> println("The string $myString contains none of the above letters ")
+    }
+
+
     //TODO If the string, passed as a parameter:
     //    - contains the letter A, print the string and say it contains A.
     //    - contains the letter B, print the string and say it contains B.
     //    - contains the letter C, print the string and say it contains C.
     //    - is empty, inform the user that it is empty.
     //    - otherwise print the string and say it doesn't contain A, B or C.
-}
+
+//.contains
