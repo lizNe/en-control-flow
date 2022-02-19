@@ -15,10 +15,12 @@ fun main(args: Array<String>) {
     minimumOf(5,7)
     rangeOf(4)
     inferredTypeOf(0.0F)
-    stringContains("dad")
+    stringContains("bad")
 
 }
 
+// 2 Parameters are passed into the function each with type Long
+// If num1 is less than num2 print statement else if num1 is bigger or equal to num2 print other statement
 fun minimumOf(number1: Long, number2: Long){
     if(number1<number2) {
         println("Number 1 is less than Number2 ")
@@ -26,11 +28,10 @@ fun minimumOf(number1: Long, number2: Long){
         println("Number 2 is greater than Number 1 ")
     }
 
-    //TODO This function takes in two numbers and:
-    //  if number1 is less than number2, then print a message informing the user of that.
-    //  if number1 is greater than or equal to number2, print a message letting the user know that.
 }
 
+// Int.MIN_VALUE goes below 0, goes for minus values if entered as the parameter in the function rangeOf()
+// Int.MAX_VALUE goes over as far as INT goes
 fun rangeOf(number: Int){
     when(number){
         in Int.MIN_VALUE..0-> println("The number falls into the range is 0 or below")
@@ -40,12 +41,10 @@ fun rangeOf(number: Int){
         in 21..Int.MAX_VALUE->println("The number falls into the range is 21 and over")
         else->println("The number is: $number")
     }
-
-
-    //TODO This function takes in a number and prints out the range that the number falls in.
-    // The ranges are: (0 or below) (1 to 5), (6 to 10), (11 to 20), (21+)
-    // For example, if the number was 7, print out a message saying that the number 7 falls into the range 6 to 10.
 }
+
+// Has the parameter names variable with the variable type being any.
+// The variable is (0.0F) so when this variable is either of the variable types the appropriate statement will print
 
 fun inferredTypeOf(variable: Any) {
     when (variable) {
@@ -61,13 +60,10 @@ fun inferredTypeOf(variable: Any) {
     }
 }
 
-
-    //TODO This function examines the inferred type of the variable passed as a parameter.
-    // When the type is Int, print out that the data type of the variable is Int.
-    // Adopt the same approach for the following types: Long, Double, Float or Boolean.
-    // When the data type is not Int, Long, Double, Float or Boolean, print that the data type is something else.
-
-
+// myString will turn into uppercase so when the word passed contains a lowercase letter
+// one of the println statements will print saying it contains the letter regardless of case.
+// Char ' ' String " " ----!!!!!! REMEMBER
+// Will always execute the first statement A regardless if the first letter was b (bad). Can change to .first()
 fun stringContains(myString : String) = when {
         myString.uppercase().contains('A') -> println("The string $myString contains the letter A")
         myString.uppercase().contains('B') -> println("The string $myString contains the letter B")
@@ -75,13 +71,3 @@ fun stringContains(myString : String) = when {
         myString.isEmpty() -> println("Empty String..no word displayed")
         else -> println("The string $myString contains none of the above letters ")
     }
-
-
-    //TODO If the string, passed as a parameter:
-    //    - contains the letter A, print the string and say it contains A.
-    //    - contains the letter B, print the string and say it contains B.
-    //    - contains the letter C, print the string and say it contains C.
-    //    - is empty, inform the user that it is empty.
-    //    - otherwise print the string and say it doesn't contain A, B or C.
-
-//.contains
