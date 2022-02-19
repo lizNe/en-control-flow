@@ -11,7 +11,7 @@
 //     a lower grade for the assignment as it is a software development tooling module.
 // Hint: the week 2 syntax labs are a good support for completing this project
 
-fun main(args: Array<String>) {
+fun main() {
     minimumOf(5,7)
     rangeOf(4)
     inferredTypeOf(0.0F)
@@ -64,6 +64,7 @@ fun inferredTypeOf(variable: Any) {
 // one of the println statements will print saying it contains the letter regardless of case.
 // Char ' ' String " " ----!!!!!! REMEMBER
 // Will always execute the first statement A regardless if the first letter was b (bad). Can change to .first()
+
 fun stringContains(myString : String) = when {
         myString.uppercase().contains('A') -> println("The string $myString contains the letter A")
         myString.uppercase().contains('B') -> println("The string $myString contains the letter B")
